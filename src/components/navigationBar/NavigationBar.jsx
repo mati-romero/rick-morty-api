@@ -5,7 +5,7 @@ export default function NavigationBar() {
     <nav className="flex flex-col items-center justify-center py-6 text-white">
       {/* Logo */}
       <img
-        src="/img/titulo.svg"
+        src="img/titulo.svg"
         alt="Logo"
         className="max-w-[400px] w-full mx-auto mb-6"
       />
