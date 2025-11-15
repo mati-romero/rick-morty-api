@@ -11,4 +11,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'), // 👈 @ apunta a src/
     },
   },
+  base: "/rick-morty-api/",
 })
