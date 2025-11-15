@@ -1,0 +1,12 @@
+.simple {
+    border:1px solid #1f401f;
+    cursor:pointer;
+    padding: 0.5rem;
+    color:#7CFF00;
+    background:#112611;
+}
+
+.simple:disabled {
+    background: #000;
+    cursor: default;
+}

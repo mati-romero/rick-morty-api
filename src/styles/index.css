@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* GLOBAL STYLES */
+@layer base {
+  a {
+    color:#7CFF00;
+    font-weight: theme(fontWeight.semibold);
+    transition: color 0.2s;
+  }
+
+  a:hover {
+    color:#99cc99;
+  }
+
+  a.active {
+    color:#99cc99;
+    text-decoration: underline;
+  }
+}
+
+body {
+  background: radial-gradient(circle at center, #0c1f0c 0%, #000 100%);
+}
