@@ -1,0 +1,55 @@
+.selectCustom {
+    width:100%;
+    max-width:400px;
+    padding:0.6rem 1rem;
+    border-radius:25px;
+    border:none;
+    outline:none;
+    background:#0f2d0f;
+    color:#aaffaa;
+    margin:1rem 0;
+    cursor:pointer;
+
+    /* Quitar apariencia nativa */
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+
+    /* Flecha custom */
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23aaffaa' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M5.25 7.5L10 12.25L14.75 7.5H5.25Z'/></svg>");
+    background-repeat: no-repeat;
+
+    /* 👉 ACÁ movés la flecha */
+    background-position: right 1rem center;
+    background-size: 16px;
+}
+
+/* Color cuando pasás el mouse */
+.selectCustom:hover {
+    color:#99cc99;
+}
+
+/* Opciones del select */
+.selectCustom option {
+    background:#0f2d0f;
+    color:#aaffaa;
+    padding:0.6rem;
+    border:none;
+}
+
+/* Opciones al pasar el mouse (Chrome/Edge) */
+.selectCustom option:hover {
+    background:#113311;
+    color: red;
+}
+
+/* Responsive igual que el input */
+@media (max-width: 768px) {
+  .selectCustom {
+    max-width:100px;
+  }
+
+  .selectCustom option {
+    max-width: 100px;
+  }
+}

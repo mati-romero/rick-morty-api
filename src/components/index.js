@@ -3,3 +3,5 @@ export { default as Card } from '../components/card/Card';
 export { default as Button } from '../components/button/Button';
 export { default as Pagination } from "../components/pagination/Pagination";
 export { default as Loading } from "../components/loading/Loading";
+export { default as Input } from "../components/input/Input";
+export { default as Select } from "../components/select/Select";
