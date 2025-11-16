@@ -5,7 +5,7 @@ export default function Card({item}) {
     <div key={item.id} className={`${style.card}`}>
         <img src={item.image} alt={item.name} className="rounded-md" />
         <h3>{item.name}</h3>
-        <p>${item.status} - ${item.species}</p>
+        <p>{item.status} - {item.species}</p>
     </div>
   );
 }

@@ -1,0 +1,21 @@
+.search {
+    width:100%;
+    max-width:400px;
+    padding:0.6rem 1rem;
+    border-radius:25px;
+    border:none;
+    outline:none;
+    background:#0f2d0f;
+    color:#aaffaa;
+    margin:1rem 0;
+}
+
+.search::placeholder {
+    color:#77bb77;
+}
+
+@media (max-width: 768px) {
+  .search {
+    max-width:100px;
+  }
+}

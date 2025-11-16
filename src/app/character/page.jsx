@@ -32,8 +32,6 @@ export default function CharacterPage() {
           <Card key={index} item={char}/>
         ))}
       </div>
-
-      <Pagination page={page} setCharacters={setCharacters} setPage={setPage} setLoading={setLoading}/>
     </>
   );
   
