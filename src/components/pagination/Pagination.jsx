@@ -49,7 +49,6 @@ export default function Pagination({ page, setLoading, setCharacters, setPage })
         <Select items={status} action={e => updateFilter("status",e)}/>
         <Select items={genders} action={e => updateFilter("gender",e)}/>
         <>
-          <label>Pages</label>
           <Button text={"<"} disabled={!page?.prev} onClick={() => changePage(page?.prev)}/>
           <Button text={">"} disabled={!page?.next} onClick={() => changePage(page?.next)}/>
         </>

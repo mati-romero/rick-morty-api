@@ -16,6 +16,6 @@
 
 @media (max-width: 768px) {
   .search {
-    max-width:100px;
+    max-width: none;
   }
 }
