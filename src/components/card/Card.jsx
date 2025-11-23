@@ -2,13 +2,13 @@ import { useState } from "react";
 import style from "./Card.module.css";
 import { Modal, CardDetailView } from "@/components";
 
-export default function Card({item}) {
+export default function Card({item, setLoading}) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <Modal open={open} onClose={() => setOpen(false)}>
-        <CardDetailView id={item.id}/>
+        <CardDetailView character={item} setLoading={setLoading}/>
       </Modal>
 
       <div key={item.id} className={`${style.card}`} onClick={() => setOpen(true)}>
