@@ -1,58 +1,28 @@
-import { useEffect, useState } from "react";
-import { Button, Input, Select } from "@/components";
-import { changeCharacterPage, getLeakedCharacters } from "@/services/characters";
-import {status, genders} from "./utils/filters";
+import { Button } from "@/components";
 
-export default function Pagination({ page, setLoading, setCharacters, setPage }) {
+export default function Pagination({ page, setLoading, setItems, setPage }) {
 
-  const [filters, setFilters] = useState({
-    name: "",
-    status: "",
-    gender: ""
-  });
+  const loadPage = async(url) => {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Page not found");
+    return await response.json();
+  }
 
   const changePage = async(url=null) => {
     if(!url) return null;
 
     setLoading(true);
-    const res = await changeCharacterPage(url);
+    const res = await loadPage(url);
 
-    setCharacters(res.results);
+    setItems(res.results);
     setPage(res.info);
     setLoading(false);
   }
-
-  const changeFilter = async() => {
-    setLoading(true);
-    const res = await getLeakedCharacters(filters);
-
-    setCharacters(res.results);
-    setPage(res.info);
-    setLoading(false);
-  }
-
-  const updateFilter = (key, value) => {
-    setFilters(prev => ({
-      ...prev,
-      [key]: value
-    }));
-  };
-
-  //useEffect
-  useEffect(() => {
-    changeFilter();
-  },[filters]);
 
   return (
     <div className="flex justify-between items-center w-full py-4">
-        <Input placeholderText={"Name.."} action={e => updateFilter("name",e)}/>
-        <Select items={status} action={e => updateFilter("status",e)}/>
-        <Select items={genders} action={e => updateFilter("gender",e)}/>
-        <>
-          <label>Pages</label>
-          <Button text={"<"} disabled={!page?.prev} onClick={() => changePage(page?.prev)}/>
-          <Button text={">"} disabled={!page?.next} onClick={() => changePage(page?.next)}/>
-        </>
+      <Button text={"<"} disabled={!page?.prev} onClick={() => changePage(page?.prev)}/>
+      <Button text={">"} disabled={!page?.next} onClick={() => changePage(page?.next)}/>
     </div>
   );
 }

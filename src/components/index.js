@@ -5,3 +5,7 @@ export { default as Pagination } from "../components/pagination/Pagination";
 export { default as Loading } from "../components/loading/Loading";
 export { default as Input } from "../components/input/Input";
 export { default as Select } from "../components/select/Select";
+export { default as Modal } from "../components/modal/Modal";
+export { default as CardDetailView } from "../components/cardDetailView/CardDetailView";
+export { default as Accordion } from "../components/accordion/Accordion";
+export { default as Filters } from "../components/filters/Filters";

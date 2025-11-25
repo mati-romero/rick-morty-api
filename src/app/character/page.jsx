@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllCharacters } from "@/services/characters";
-import { Card, Pagination, Loading } from "@/components";
+import { Card, Filters, Loading } from "@/components";
 
 export default function CharacterPage() {
 
@@ -25,11 +25,11 @@ export default function CharacterPage() {
     <>
       {loading && <Loading size={200}/>}
 
-      <Pagination page={page} setCharacters={setCharacters} setPage={setPage} setLoading={setLoading}/>
+      <Filters page={page} setCharacters={setCharacters} setPage={setPage} setLoading={setLoading}/>
 
       <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-8 gap-4">
         {characters.map((char, index) => (
-          <Card key={index} item={char}/>
+          <Card key={index} item={char} setLoading={setLoading}/>
         ))}
       </div>
     </>
