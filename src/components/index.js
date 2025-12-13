@@ -9,3 +9,5 @@ export { default as Modal } from "../components/modal/Modal";
 export { default as CardDetailView } from "../components/cardDetailView/CardDetailView";
 export { default as Accordion } from "../components/accordion/Accordion";
 export { default as Filters } from "../components/filters/Filters";
+export { default as Table } from "../components/table/Table";
+export { default as Box } from "../components/box/Box";
