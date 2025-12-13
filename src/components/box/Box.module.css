@@ -1,0 +1,10 @@
+.box {
+    background:#112611;
+    border:1px solid #1f401f;
+    border-radius:1rem;
+    overflow:hidden;
+    text-align:left;
+    transition:transform .2s, box-shadow .3s;
+    cursor:pointer;
+    padding: 2rem;
+}

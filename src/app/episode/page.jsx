@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Accordion, Loading, Modal, CardDetailView, Pagination } from "@/components";
 import { getAllEpisodes } from "@/services/episodes";
 import { getCharacterById } from "@/services/characters";
+import { extractIds } from "@/utils/funtions";
 
 export default function EpisodePage() {
 
@@ -11,13 +12,6 @@ export default function EpisodePage() {
   const [charactersByEpisode, setCharactersByEpisode] = useState({});
   const [open, setOpen] = useState(false);
   const [selectedCharacter, setSelectedCharacter] = useState(null);
-
-  selectedCharacter
-
-  const extractIds = (urls) => {
-    const ids = urls.map(url => url.split("/").pop());
-    return `[${ids.join(", ")}]`;
-  }
 
   const loadCharacters = async(episode) => {
     const episodeId = episode.id;

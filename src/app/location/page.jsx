@@ -1,8 +1,39 @@
+import { useEffect, useState } from "react";
+import { getAllLocations } from "@/services/locations";
+import { Table, Loading } from "@/components";
+
 export default function LocationPage() {
+
+  const [locations, setLocations] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [page, setPage] = useState([]);
+
+  const columns = ["name", "type", "dimension", "action"];
+
+  const loadLocations = async() => {
+    setLoading(true);
+    const res = await getAllLocations();
+    setLocations(res.results);
+    setPage(res.info);
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    loadLocations();
+  }, []);
+
   return (
-    <div className="text-center text-2xl text-white">
-      <h1>Bienve</h1>
-      <p className="text-gray-400">Seleccioná una categoría arriba 👆</p>
-    </div>
+    <>
+      {loading && <Loading size={200}/>}
+
+      <Table 
+        headers={columns} 
+        data={locations} 
+        setData={setLocations}
+        page={page}
+        setPage={setPage}
+        setLoading={setLoading}
+      />
+    </>
   );
 }

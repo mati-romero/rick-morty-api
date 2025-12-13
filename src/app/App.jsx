@@ -3,6 +3,7 @@ import { NavigationBar } from "@/components";
 import CharacterPage from "./character/page";
 import EpisodePage from "./episode/page";
 import LocationPage from "./location/page";
+import LocationDetailPage from "./location/detail/page";
 import HomePage from "./home/page";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path="/character" element={<CharacterPage />} />
             <Route path="/episode" element={<EpisodePage />} />
             <Route path="/location" element={<LocationPage />} />
+            <Route path="/location/:name" element={<LocationDetailPage />} />
           </Routes>
         </main>
     </Router>

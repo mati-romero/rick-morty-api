@@ -22,7 +22,7 @@ body {
   background: radial-gradient(circle at center, #0c1f0c 0%, #000 100%);
 }
 
-h2 {
+h2, h3 {
   color:#7CFF00;
   margin-bottom:0.3rem;
 }
@@ -35,4 +35,8 @@ p {
 
 strong {
     color: #2a552a;
+}
+
+hr {
+    color: #b6ffb6;
 }
