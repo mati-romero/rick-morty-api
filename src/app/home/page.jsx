@@ -29,7 +29,7 @@ export default function HomePage() {
       {loading && <Loading size={200}/>}
 
       <img 
-        src="/img/r&m.png" 
+        src="img/r&m.png" 
         alt="Rick" 
         className="max-w-[400px] w-full mx-auto"
       />
@@ -62,7 +62,7 @@ export default function HomePage() {
         </div>
         <div className="col-span-6">
           <img 
-            src="/img/r&m2.png" 
+            src="img/r&m2.png" 
             alt="Rick" 
             className="max-w-[400px] w-full mx-auto"
           />
@@ -76,7 +76,7 @@ export default function HomePage() {
       </div>
 
       <img 
-        src="/img/r&m3.png" 
+        src="img/r&m3.png" 
         alt="Rick" 
         className="max-w-[400px] w-full mx-auto"
       />
