@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { RoundedImage, Loading } from "@/components";
 import { getCharacterById } from "@/services/characters";
+import { asset } from "@/utils/asset";
 
 export default function HomePage() {
 
@@ -29,7 +30,7 @@ export default function HomePage() {
       {loading && <Loading size={200}/>}
 
       <img 
-        src="/img/r&m.svg" 
+        src={asset("img/rm.svg")}
         alt="Rick" 
         className="max-w-[400px] w-full mx-auto"
       />
@@ -62,7 +63,7 @@ export default function HomePage() {
         </div>
         <div className="col-span-6">
           <img 
-            src="/img/r&m2.svg" 
+            src={asset("img/rm2.svg")}
             alt="Rick" 
             className="max-w-[400px] w-full mx-auto"
           />
@@ -76,7 +77,7 @@ export default function HomePage() {
       </div>
 
       <img 
-        src="/img/r&m3.svg" 
+        src={asset("img/rm3.svg")}
         alt="Rick" 
         className="max-w-[400px] w-full mx-auto"
       />

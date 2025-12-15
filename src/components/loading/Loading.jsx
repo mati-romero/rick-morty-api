@@ -1,3 +1,5 @@
+import { asset } from "@/utils/asset";
+
 export default function Loading({ size = 60 }) {
   return (
     <div className="
@@ -7,7 +9,7 @@ export default function Loading({ size = 60 }) {
         z-50
     ">
       <img
-        src={"img/loading.svg"}
+        src={asset("img/loading.svg")}
         alt="loading"
         style={{ width: size }}
         className="animate-spin mb-4"
