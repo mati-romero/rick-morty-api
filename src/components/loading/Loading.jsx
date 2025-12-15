@@ -7,7 +7,7 @@ export default function Loading({ size = 60 }) {
         z-50
     ">
       <img
-        src={"img/loading.svg"}
+        src={"/img/loading.svg"}
         alt="loading"
         style={{ width: size }}
         className="animate-spin mb-4"
